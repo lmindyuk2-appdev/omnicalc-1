@@ -4,16 +4,16 @@
 
 <dl>
   <dt> APR</dt>
-  <dd> <%= @apr %></dd>
+  <dd> <%= number_to_percentage(@apr, precision: 4) %></dd>
 
   <dt> Number of years</dt>
-  <dd> <%= @num_years %><</dd>
+  <dd> <%= @num_years %></dd>
 
   <dt> Principal</dt>
-  <dd> <%= @principal %> </dd>
+  <dd> <%= number_to_currency(@principal, separator: ".")%> </dd>
 
   <dt> Payment</dt>
-  <dd> <%= @payment %></dd>
+  <dd> <%= number_to_currency(@payment,separator: ".") %></dd>
 </dl>
 
 <a href="/payment/new">
